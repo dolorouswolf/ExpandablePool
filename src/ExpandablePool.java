@@ -78,5 +78,6 @@ public class ExpandablePool {
             pool.clear();
         }
         System.out.println("pool clear, drop "+dropSize);
+        System.out.println("max connect size "+ Connect.maxConnectSize);
     }
 }

@@ -9,6 +9,14 @@ public class Connect {
     private int normalCost = 50;
     private int failCost = 10000;
     private double failPercent = 1.0/8.0;
+    public static int connectSize = 0;
+    public static int maxConnectSize = 0;
+
+    public Connect() {
+        connectSize ++;
+        if (maxConnectSize < connectSize)
+            maxConnectSize = connectSize;
+    }
 
     public void use() throws InterruptedException {
         if (isFirst) {
@@ -27,6 +35,6 @@ public class Connect {
     }
 
     public void close() {
-
+        connectSize --;
     }
 }
